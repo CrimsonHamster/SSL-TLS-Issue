@@ -37,28 +37,28 @@ Cipher suite คือชุดของ cryptographic algorithm ที่ทำ
 รายการต่อไปนี้เป็น cipher ที่ไม่ควรเปิดใช้งาน
 ##### Null cipher
 >คือ cipher suite ที่ไม่มีการทำ encryption ข้อความ ทำให้มีความเสี่ยงที่ข้อมูลถูกเปิดเผย
-ตัวอย่าง
-- TLS_NULL_WITH_NULL_NULL
-- TLS_DHE_PSK_WITH_NULL_SHA
-- TLS_ECDHE_PSK_WITH_NULL_SHA256
+>ตัวอย่าง
+>- TLS_NULL_WITH_NULL_NULL
+>- TLS_DHE_PSK_WITH_NULL_SHA
+>- TLS_ECDHE_PSK_WITH_NULL_SHA256
 
 ##### Anonymous ciphers
 >คือ cipher  suite ที่ไม่มีการทำ Key-Exchange authentication ทำให้มีความเสี่ยงที่ข้อมูลถูกเปิดเผย
-ตัวอย่าง
-- TLS_DH_anon_WITH_AES_256_GCM_SHA384
+>ตัวอย่าง
+>- TLS_DH_anon_WITH_AES_256_GCM_SHA384
 
 ##### EXPORT ciphers 
 >จัดเป็น low-grade cipher suite ที่ไม่แข็งแรงโดยมีช่องโหว่ที่เป็นช่องโหว่ well-know ที่สามารถ break encryption ของข้อความได้ 
-ตัวอย่าง
--	EXP-RC4-MD5
--	EXP-EDH-RSA-DES-CBC-SHA
--	EXP1024-RC2-CBC-MD5
+>ตัวอย่าง
+>-	EXP-RC4-MD5
+>-	EXP-EDH-RSA-DES-CBC-SHA
+>-	EXP1024-RC2-CBC-MD5
 
 ##### Insecure/Weak cipher อื่น ๆ 
 >-	RC4 - insecure
--	64-bit block cipher (3DES / DES / RC2 / IDEA) - weak
--	weak ciphers (112 bits or less) - weak
--	RSA key exchange - weak
+>-	64-bit block cipher (3DES / DES / RC2 / IDEA) - weak
+>-	weak ciphers (112 bits or less) - weak
+>-	RSA key exchange - weak
 
 #### Remediation:
 ยกเลิกการสนับสนุน algorithm ที่ไม่ปลอดภัย หรือ ไม่มีความแข็งแรง 
@@ -117,8 +117,6 @@ Certificate ถูก sign ด้วย algorithm ที่ไม่แข็ง
 #### Remediation
 ทำการ reissue TLS certificate โดยใช้ SHA-2 ในการ sign digital signature แทน
 
-#### Ref:
--
  
 ## Untrusted Certification
 | CVSS v3 Base Score | Vector |
@@ -135,8 +133,6 @@ Certificate ถูก sign ด้วย algorithm ที่ไม่แข็ง
 ##### สำหรับ Internal application 
 - สามารถใช้ internal CA ในการ sign certificate ซึ่ง certificate ดังกล่าวจะถูกเชื่อถือโดยผู้ใช้ที่มีการติดตั้ง internal CA certificate 
 
-#### Ref:
--
 
 ## Certificate Chain of Trust Incomplete
 | CVSS v3 Base Score | Vector |
