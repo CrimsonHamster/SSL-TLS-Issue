@@ -31,7 +31,7 @@ https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices
 | :---: | :---: |
 |up to 5.3 | AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N |
 
-Cipher suite คือชุดของ cryptographic algorithm ที่ทำหน้าที่ต่าง ๆ ใน protocol SSL/TLS ดังตัวอย่างในภาพ
+Cipher suite คือชุดของ cryptographic algorithm ที่ทำหน้าที่ต่าง ๆ ใน protocol SSL/TLS ดังตัวอย่างในภาพ\
 ![alt text](https://docs.microsoft.com/th-th/windows/win32/secauthn/images/tls-cipher-suite.png)
 
 รายการต่อไปนี้เป็น cipher ที่ไม่ควรเปิดใช้งาน
